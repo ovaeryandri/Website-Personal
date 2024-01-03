@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 150vh;
+}
+
+.image {
+  background-image: url(image/tampil6.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  padding: 30px;
+  opacity: 0.8;
+  width: 500px;
+}
+
+h1 {
+  display: grid;
+  place-items: center;
+  border-bottom: solid white 1px;
+  width: 80%;
+  padding-bottom: 20px;
+}
+
+button {
+  background: goldenrod;
+  width: 70px;
+  padding: 7px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: goldenrod;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.field::placeholder {
+  color: transparent;
+}
+
+.field:placeholder-shown ~ .form_label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: white;
+  border-image-slice: 1;
+}
+
+.field:focus ~ .form_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: white;
+  font-weight: 700;
+}
+
+/* reset input */
+.field:required,
+.field:invalid {
+  box-shadow: none;
+}
+
+option {
+  background-color: black;
+}
+
+.radio {
+  accent-color: goldenrod;
+  cursor: pointer;
+}
+
+img {
+  max-width: 50px;
+  display: inline-block;
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputtotal {
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+}
+
+.inputtotal:focus {
+  outline: none;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      @import url(pesan.css);
+    </style>
+  </head>
+  <body>
+    <div class="image">
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="container">
+          <h1>RESERVASI</h1>
+          <div class="input">
+            <div class="form_group">
+              <input
+                type="input"
+                class="field"
+                placeholder="Nama Anda"
+                name="nama"
+                required=""
+              />
+              <label for="nama" class="form_label">Nama Anda</label>
+            </div>
+
+            <div class="form_group">
+              <input
+                type="input"
+                class="field"
+                placeholder="Email"
+                name="email"
+                required=""
+              />
+              <label for="email" class="form_label">Email</label>
+            </div>
+
+            <div class="form_group">
+              <input
+                type="date"
+                class="field"
+                placeholder="Tanggal Masuk"
+                name="date"
+                required=""
+              />
+              <label for="date" class="form_label">Tanggal masuk</label>
+            </div>
+
+            <div class="form_group">
+              <label for="masuk" class="form_label">Lama Nginap</label>
+              <input
+                style="width: 70px"
+                type="text"
+                class="field"
+                placeholder=""
+                name="masuk"
+                id="masuk"
+                required=""
+              />Malam
+            </div>
+
+            <div class="form_group">
+              <label for="kamar" class="form_label">No Kamar</label>
+              <select class="field" name="no_kamar">
+                <option>--Pilih No Kamar--</option>
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <option value="103">103</option>
+                <option value="104">104</option>
+                <option value="105">105</option>
+                <option value="106">106</option>
+                <option value="107">107</option>
+                <option value="108">108</option>
+                <option value="109">109</option>
+              </select>
+            </div>
+
+            <div class="form_group">
+              <label for="tipe" class="form_label">Tipe Kamar</label>
+              <select class="field" name="tipe_kamar">
+                <option value="Basic">Basic Room</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bukti">Bukti Pembayaran</label><br />
+              <input
+                type="file"
+                placeholder=""
+                name="bukti"
+                id="bukti"
+                required=""
+              />
+            </div>
+
+            <center><b>Pilih Metode Pembayaran</b></center>
+            <table>
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Bank BRI"
+                  /><img src="image/bri.png" />
+                  Bank BRI
+                </td>
+
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Paypal"
+                  /><img src="image/paypal.png" />
+                  Paypal
+                </td>
+              </tr>
+
+              <tr>
+                <td>No Bri : 4782-03-987643-22-9</td>
+                <td>No Paypal : 7743-55-54434</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Flash"
+                  /><img src="image/flash.png" />
+                  Flash
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Master Card"
+                  /><img src="image/mastercard.png" />
+                  Card
+                </td>
+              </tr>
+
+              <tr>
+                <td>No Flash: 996-6754-5532</td>
+                <td>No Card: 8466-09-837435</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Dana"
+                  /><img src="image/dana.png" />
+                  Dana
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="pembayaran"
+                    class="radio"
+                    value="Visa"
+                  /><img src="image/visa.png" />
+                  Card
+                </td>
+              </tr>
+              <tr>
+                <td>No Dana : 085788064435</td>
+                <td>No Visa : 9986-7746-77</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="total">
+            Total :
+            <div>
+              Rp.<input
+                type="text"
+                class="inputtotal"
+                id="total"
+                name="total"
+                style="width: 80px"
+              />
+            </div>
+          </div>
+
+          <button type="submit" name="pesan">
+            <a href="index.html">KEMBALI</a>
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(".container").keyup(function () {
+        var masuk = $("#masuk").val();
+        var hasil = 700000 * masuk;
+
+        $("#total").attr("value", hasil);
+      });
+    </script>
+  </body>
+</html>
